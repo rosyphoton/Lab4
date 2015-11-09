@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Search</title>
+</head>
+<div align="center">
+<body>
+    {% if errors %}
+        <font color="Violet">
+        <ul>
+            {% for error in errors %}
+            {{ error }}
+            {% endfor %}
+        </ul>
+        </font>
+    {% endif %}
+    <form action="/search/" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="Search">
+    </form>
+<p><a href = "/home/">return to the home</a></p>
+</body>
+</div>
+</html>

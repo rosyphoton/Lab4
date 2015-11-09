@@ -1,0 +1,19 @@
+<div align="center">
+<p>You searched for: <strong>{{ query }}</strong></p>
+
+{% if books %}
+    <p>Found {{ books|length }} book{{ books|pluralize }}.</p>
+    <ul>
+        {% for book in books %}
+        <li><a href = "/ISBN/{{book.ISBN}}">{{ book.Title }}</a>
+            <a href = "/delete/{{book.ISBN}}">delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No book matched your search criteria.</p>
+{% endif %}
+
+<p><a href = "/home/">return to the home</a></p>
+<p><a href = "/search/">continue to search</a></p>
+</div>
