@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+<div align="center">
+<table width="500" border="1">
+<p><strong>Book massage</strong></p>
+    {% if Book_list %}
+        <th scope="col">&nbsp;<li>Title</li></th>
+        <th scope="col">&nbsp;<li>Publisher</li></th>
+        <th scope="col">&nbsp;<li>Price</li></th>
+        <ul>
+            {% for book in Book_list %}
+            <tr>
+                <th scope="col">&nbsp;<font color="Violet"><li>{{ book.Title }}</li></th>
+                <th scope="col">&nbsp;<font color="Violet"><li>{{ book.Publisher }}</li></th>
+                <th scope="col">&nbsp;<font color="Violet"><li>{{ book.Price }}</li></th>
+            </tr>
+            {% endfor %}
+        </ul>
+        </font>
+    {% endif %}
+</table>
+
+<table width="500" border="1">
+<p><strong>Author massage</strong></p>
+    {% if Author_list %}
+        <th scope="col">&nbsp;<li>Name</li></th>
+        <th scope="col">&nbsp;<li>Age</li></th>
+        <th scope="col">&nbsp;<li>Country</li></th>
+        <ul>
+            {% for author in Author_list %}
+            <tr>
+                <th scope="col">&nbsp;<font color="Violet"><li>{{ author.Name }}</li></th>
+                <th scope="col">&nbsp;<font color="Violet"><li>{{ author.Age }}</li></th>
+                <th scope="col">&nbsp;<font color="Violet"><li>{{ author.Country }}</li></th>
+            </tr>
+            {% endfor %}
+        </ul>
+        </font>
+    {% endif %}
+</table>
+</div>
+</body>
+<p><a href = "/search/">search for author</a></p>
+</html>
